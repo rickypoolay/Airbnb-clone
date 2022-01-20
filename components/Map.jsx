@@ -18,14 +18,13 @@ function Map({ searchResults }) {
   const center = getCenter(coordinates);
 
   const [viewport, setViewport] = useState({
-    width: "100%",
-    height: "100%",
+    width: "100vw",
+    height: "100vh",
     latitude: center.latitude,
     longitude: center.longitude,
     zoom: 11,
   });
 
-  console.log(selectedLocation);
   return (
     <ReactMapGL
       mapStyle={"mapbox://styles/rpoullet/ckymnwnwn0dmi15pq6yxfndfr?"}

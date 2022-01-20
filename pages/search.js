@@ -64,8 +64,10 @@ function Search({ searchResults }) {
           </div>
         </section>
 
-        <section className="hidden xl:inline-flex xl:min-w-[600px]">
-          <Map searchResults={searchResults} />
+        <section className="xl:inline xl:min-w-[600px]">
+          <div className="hidden sticky top-20 xl:flex">
+            <Map searchResults={searchResults} />
+          </div>
         </section>
       </main>
 
