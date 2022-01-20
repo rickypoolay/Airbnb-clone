@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import InfoCard from "../components/InfoCard";
+import Map from "../components/Map";
 
 function Search({ searchResults }) {
   const router = useRouter();
@@ -16,8 +17,8 @@ function Search({ searchResults }) {
     <div className="">
       <Header placeholder={`${location} | ${range} | ${numOfGuests}`} />
 
-      <main className="flex">
-        <section className="flex-grow pt-14 px-6">
+      <main className="flex max-w-7xl mx-auto px-8 sm:px-16 shadow-md">
+        <section className="pt-14 px-6 mx-auto">
           <p className="text-xs">
             300+ Stays for {numOfGuests} {numOfGuests == 1 ? "guest" : "guests"}{" "}
             | {range}
@@ -61,6 +62,10 @@ function Search({ searchResults }) {
               )
             )}
           </div>
+        </section>
+
+        <section className="hidden xl:inline-flex xl:min-w-[600px]">
+          <Map searchResults={searchResults} />
         </section>
       </main>
 

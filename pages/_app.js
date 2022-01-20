@@ -15,7 +15,11 @@ Router.events.on("routeChangeComplete", progress.finish);
 Router.events.on("routeChangeError", progress.finish);
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <div>
+      <Component {...pageProps} />;
+    </div>
+  );
 }
 
 export default MyApp;
